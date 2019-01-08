@@ -3,15 +3,13 @@
  * Created by PhpStorm.
  * User: nemanja.ivankovic
  * Date: 12/31/2018
- * Time: 8:09 AM
+ * Time: 8:09 AM.
  */
 
 namespace Paragraf\ViberBot\Model;
 
-
 class Button
 {
-
     public $ActionType;
 
     public $ActionBody;
@@ -75,5 +73,4 @@ class Button
 
         return $this;
     }
-
 }

@@ -3,15 +3,13 @@
  * Created by PhpStorm.
  * User: nemanja.ivankovic
  * Date: 12/24/2018
- * Time: 3:00 PM
+ * Time: 3:00 PM.
  */
 
 namespace Paragraf\ViberBot\Model;
 
-
 class ViberUser
 {
-
     public $id;
 
     public $name;
@@ -108,8 +106,4 @@ class ViberUser
 
         return $this;
     }
-
-
-
-
 }

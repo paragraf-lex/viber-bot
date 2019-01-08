@@ -6,21 +6,21 @@
 
 return [
 
-    "api-key" => env("VIBERBOT_API"),
+    'api-key' => env('VIBERBOT_API'),
 
-    "name" => env("VIBERBOT_NAME"),
+    'name' => env('VIBERBOT_NAME'),
 
-    "photo" => env("VIBERBOT_PHOTO"),
+    'photo' => env('VIBERBOT_PHOTO'),
 
-    "controller" => "",
+    'controller' => '',
 
-    "event_types" => [
-        "delivered",
-        "seen",
-        "failed",
-        "subscribed",
-        "unsubscribed",
-        "conversation_started",
+    'event_types' => [
+        'delivered',
+        'seen',
+        'failed',
+        'subscribed',
+        'unsubscribed',
+        'conversation_started',
     ],
 
 ];

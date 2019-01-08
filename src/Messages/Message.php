@@ -1,6 +1,6 @@
 <?php
-namespace Paragraf\ViberBot\Messages;
 
+namespace Paragraf\ViberBot\Messages;
 
 use Paragraf\ViberBot\Http\Http;
 use Paragraf\ViberBot\Intefaces\MessageInterface;
@@ -8,12 +8,11 @@ use Paragraf\ViberBot\Intefaces\MessageSendInterface;
 
 class Message implements MessageInterface, MessageSendInterface
 {
-
     protected $user_id;
 
     protected $type;
 
-    protected $tracking_data = "tracking data";
+    protected $tracking_data = 'tracking data';
 
     protected $min_api_version = 1;
 
@@ -83,8 +82,4 @@ class Message implements MessageInterface, MessageSendInterface
 
         return $this;
     }
-
-
-
-
 }
