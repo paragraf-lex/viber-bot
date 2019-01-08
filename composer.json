@@ -1,0 +1,57 @@
+{
+    "name": "paragraf-lex/viber-bot",
+    "description": "Viber bot for PHP for Laravel",
+    "keywords": [
+        "paragraf",
+        "viber",
+        "bot",
+        "laravel",
+        "php"
+    ],
+    "homepage": "https://github.com/paragraf-lex/viber-bot",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Nemanja Ivankovic",
+            "email": "nemanja.ivankovic@paragraf.rs",
+            "homepage": "https://paragraf.rs",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1.3",
+        "ext-curl": "*",
+        "ext-json": "*",
+        "guzzlehttp/guzzle": "~6.0",
+        "php-curl-class/php-curl-class": "^8.4"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4":  {
+          "Paragraf\\ViberBot\\": "src"
+        },
+        "files": [
+          "src/helpers.php"
+        ]
+    },
+    "autoload-dev": {
+        "psr-4": {
+          "Paragraf\\ViberBot\\Test\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Paragraf\\ViberBot\\ViberBotServiceProvider"
+            ]
+        }
+    }
+}
