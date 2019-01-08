@@ -3,11 +3,10 @@
  * Created by PhpStorm.
  * User: nemanja.ivankovic
  * Date: 12/31/2018
- * Time: 10:09 AM
+ * Time: 10:09 AM.
  */
 
 namespace Paragraf\ViberBot\Model;
-
 
 class Keyboard
 {
@@ -21,15 +20,11 @@ class Keyboard
     {
         $this->DefaultHeight = $DefaultHeight;
 
-        if (is_array($Buttons))
-        {
-            foreach ($Buttons as $button)
-            {
+        if (is_array($Buttons)) {
+            foreach ($Buttons as $button) {
                 $this->Buttons[] = $button;
             }
-        }
-        else
-        {
+        } else {
             $this->Buttons[] = $Buttons;
         }
     }
@@ -69,5 +64,4 @@ class Keyboard
 
         return $this;
     }
-
 }

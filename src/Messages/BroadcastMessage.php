@@ -3,18 +3,16 @@
  * Created by PhpStorm.
  * User: nemanja.ivankovic
  * Date: 12/31/2018
- * Time: 10:39 AM
+ * Time: 10:39 AM.
  */
 
 namespace Paragraf\ViberBot\Messages;
 
-
-use Paragraf\ViberBot\Intefaces\MessageInterface;
 use Paragraf\ViberBot\TextMessage;
+use Paragraf\ViberBot\Intefaces\MessageInterface;
 
 class BroadcastMessage extends TextMessage implements MessageInterface
 {
-
     protected $broadcast = [];
 
     public function body()
@@ -37,5 +35,4 @@ class BroadcastMessage extends TextMessage implements MessageInterface
 
         return $this;
     }
-
 }

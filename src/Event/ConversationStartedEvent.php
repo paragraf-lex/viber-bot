@@ -3,14 +3,13 @@
  * Created by PhpStorm.
  * User: nemanja.ivankovic
  * Date: 12/24/2018
- * Time: 3:10 PM
+ * Time: 3:10 PM.
  */
 
 namespace Paragraf\ViberBot\Event;
 
-
-use Paragraf\ViberBot\Intefaces\EventInterface;
 use Paragraf\ViberBot\Model\ViberUser;
+use Paragraf\ViberBot\Intefaces\EventInterface;
 
 class ConversationStartedEvent extends Event implements EventInterface
 {
@@ -30,12 +29,10 @@ class ConversationStartedEvent extends Event implements EventInterface
         $this->type = $type;
         $this->context = $context;
         $this->subscribed = $subscribed;
-
     }
 
     public function getUserId()
     {
         return $this->user->id;
     }
-
 }

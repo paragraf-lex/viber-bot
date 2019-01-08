@@ -3,17 +3,15 @@
  * Created by PhpStorm.
  * User: nemanja.ivankovic
  * Date: 12/24/2018
- * Time: 3:50 PM
+ * Time: 3:50 PM.
  */
 
 namespace Paragraf\ViberBot\Messages;
-
 
 use Paragraf\ViberBot\Intefaces\MessageInterface;
 
 class StickerMessage extends Message implements MessageInterface
 {
-
     public $sticker_id;
 
     protected $type = 'sticker';
@@ -36,5 +34,4 @@ class StickerMessage extends Message implements MessageInterface
 
         return $this;
     }
-
 }

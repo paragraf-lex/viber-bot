@@ -22,7 +22,7 @@ class ViberBotServiceProvider extends ServiceProvider
 
         if ($this->app->runningInConsole()) {
             $this->commands([
-                Webhook::class
+                Webhook::class,
             ]);
         }
     }
@@ -34,6 +34,5 @@ class ViberBotServiceProvider extends ServiceProvider
      */
     public function register()
     {
-
     }
 }

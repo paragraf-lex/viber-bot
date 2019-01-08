@@ -2,8 +2,8 @@
 
 namespace Paragraf\ViberBot;
 
-use Paragraf\ViberBot\Intefaces\MessageInterface;
 use Paragraf\ViberBot\Messages\Message;
+use Paragraf\ViberBot\Intefaces\MessageInterface;
 
 class TextMessage extends Message implements MessageInterface
 {
@@ -29,6 +29,4 @@ class TextMessage extends Message implements MessageInterface
 
         return $this;
     }
-
-
 }

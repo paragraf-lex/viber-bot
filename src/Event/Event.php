@@ -3,11 +3,10 @@
  * Created by PhpStorm.
  * User: nemanja.ivankovic
  * Date: 12/21/2018
- * Time: 1:29 PM
+ * Time: 1:29 PM.
  */
 
 namespace Paragraf\ViberBot\Event;
-
 
 class Event
 {

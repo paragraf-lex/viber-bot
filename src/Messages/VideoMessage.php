@@ -3,17 +3,15 @@
  * Created by PhpStorm.
  * User: nemanja.ivankovic
  * Date: 12/24/2018
- * Time: 3:32 PM
+ * Time: 3:32 PM.
  */
 
 namespace Paragraf\ViberBot\Messages;
-
 
 use Paragraf\ViberBot\Intefaces\MessageInterface;
 
 class VideoMessage extends Message implements MessageInterface
 {
-
     protected $media;
 
     protected $thumbnail;
@@ -33,20 +31,24 @@ class VideoMessage extends Message implements MessageInterface
             'duration' => $this->duration,
         ]);
     }
+
     public function getMedia()
     {
         return $this->media;
     }
+
     public function setMedia($media)
     {
         $this->media = $media;
 
         return $this;
     }
+
     public function getThumbnail()
     {
         return $this->thumbnail;
     }
+
     public function setThumbnail($thumbnail)
     {
         $this->thumbnail = $thumbnail;
@@ -77,5 +79,4 @@ class VideoMessage extends Message implements MessageInterface
 
         return $this;
     }
-
 }

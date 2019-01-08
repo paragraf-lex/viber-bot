@@ -3,11 +3,10 @@
  * Created by PhpStorm.
  * User: nemanja.ivankovic
  * Date: 12/24/2018
- * Time: 3:39 PM
+ * Time: 3:39 PM.
  */
 
 namespace Paragraf\ViberBot\Messages;
-
 
 use Paragraf\ViberBot\Intefaces\MessageInterface;
 
@@ -53,8 +52,4 @@ class ContactMessage extends Message implements MessageInterface
 
         return $this;
     }
-
-
-
-
 }

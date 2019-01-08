@@ -40,14 +40,14 @@ class Webhook extends Command
     {
         $url = $this->argument('url');
 
-        if(Http::call('POST', 'set_webhook', [
-            "url" => $url ? $url : route('viber-bot'),
-            "event_types" => config('viberbot.event_types'),
-            "send_name"=> true,
-            "send_photo"=> true
+        if (Http::call('POST', 'set_webhook', [
+            'url' => $url ? $url : route('viber-bot'),
+            'event_types' => config('viberbot.event_types'),
+            'send_name'=> true,
+            'send_photo'=> true,
         ])) {
             $this->error('Something went wrong!');
-        };
+        }
 
         $this->info('You initialize successfully your route!');
     }

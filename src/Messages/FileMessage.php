@@ -3,11 +3,10 @@
  * Created by PhpStorm.
  * User: nemanja.ivankovic
  * Date: 12/24/2018
- * Time: 3:39 PM
+ * Time: 3:39 PM.
  */
 
 namespace Paragraf\ViberBot\Messages;
-
 
 use Paragraf\ViberBot\Intefaces\MessageInterface;
 
@@ -29,6 +28,7 @@ class FileMessage extends Message implements MessageInterface
             'file_name' => $this->file_name,
         ]);
     }
+
     public function getMedia()
     {
         return $this->media;

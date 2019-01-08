@@ -2,9 +2,9 @@
 
 Route::group([
         'namespace' => 'Paragraf\ViberBot\Http\Controllers',
-        'middleware' => ['api']
+        'middleware' => ['api'],
     ],
-    function() {
+    function () {
         Route::post('viber-bot', config('viberbot.controller') ? config('viberbot.controller') : 'ViberBotController@index')->name('viber-bot');
     }
 );

@@ -1,9 +1,10 @@
 <?php
+
 namespace Paragraf\ViberBot;
 
-use Illuminate\Database\Eloquent\Collection;
-use Illuminate\Database\Eloquent\Model;
 use Paragraf\ViberBot\Http\Http;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Collection;
 
 class Bot
 {
@@ -31,8 +32,7 @@ class Bot
 
     public function on($event)
     {
-        if ($this->request->event === $event->getEvent())
-        {
+        if ($this->request->event === $event->getEvent()) {
             $this->event = $event;
 
             $this->proceed = true;
@@ -40,7 +40,6 @@ class Bot
             return $this;
         }
 
-        return;
 //        throw Exception;
     }
 
@@ -55,7 +54,6 @@ class Bot
         }
 
         if (is_string($text)) {
-
             if ($this->request->message['text'] === $text) {
                 $this->text = $text;
 
@@ -72,8 +70,7 @@ class Bot
 
     public function replay($answer, $method = null)
     {
-        if (is_array($answer))
-        {
+        if (is_array($answer)) {
             $this->replays = $answer;
 
             return $this;
@@ -85,44 +82,36 @@ class Bot
             return $this;
         }
 
-        if (is_a($answer, Collection::class))
-        {
-            foreach ($answer as $item)
-            {
+        if (is_a($answer, Collection::class)) {
+            foreach ($answer as $item) {
                 if (is_subclass_of($item, Model::class)) {
-                    eval("\$this->replays[] = \$item->". $method.";");
+                    eval('$this->replays[] = $item->'.$method.';');
                 }
             }
 
             return $this;
         }
-
-        return;
     }
 
     public function send()
     {
-
-        if ($this->proceed)
-        {
-
-            if (sizeof($this->replays) === 1)
-            {
+        if ($this->proceed) {
+            if (count($this->replays) === 1) {
                 Http::call('POST', 'send_message', array_merge($this->body, ['text' => $this->replays[0], 'receiver' => $this->event->getUserId()]));
 
                 $this->replays = [];
+
                 return;
             }
 
-            foreach ($this->replays as $replay)
-            {
+            foreach ($this->replays as $replay) {
                 Http::call('POST', 'send_message', array_merge($this->body, ['text' => $replay, 'receiver' => $this->event->getUserId()]));
             }
             $this->replays = [];
+
             return;
         }
 
-        return;
 //        throw Exception
     }
 
