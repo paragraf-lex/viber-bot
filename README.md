@@ -1,6 +1,7 @@
 # Viber Bot
 
 [![Latest Version](https://img.shields.io/github/release/paragraf-lex/viber-bot.svg?style=flat-square)](https://github.com/paragraf-lex/viber-bot/releases)
+[![StyleCI](https://styleci.io/repos/164611937/shield)](https://styleci.io/repos/164611937)
 
 ## Installation
 
