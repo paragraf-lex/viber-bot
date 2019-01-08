@@ -29,7 +29,7 @@ Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recen
 
 ## Configuration
 
-You need to set in `.env` and setup webhook.
+You need to set in `.env` and setup `webhook`.
 
 #### Env
 ```bash
