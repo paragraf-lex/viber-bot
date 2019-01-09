@@ -36,7 +36,6 @@ class Bot
             $this->event = $event;
 
             $this->proceed = true;
-
         }
 
         return $this;
