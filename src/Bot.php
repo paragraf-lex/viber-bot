@@ -37,9 +37,9 @@ class Bot
 
             $this->proceed = true;
 
-            return $this;
         }
 
+        return $this;
 //        throw Exception;
     }
 

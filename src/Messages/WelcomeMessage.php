@@ -18,9 +18,13 @@ class WelcomeMessage extends Message implements MessageInterface
 
     public function body()
     {
-        return array_merge(parent::body(), [
+        $array = array_merge(parent::body(), [
             'text' => $this->text,
         ]);
+
+        unset($array['receiver']);
+
+        return $array;
     }
 
     public function getText()

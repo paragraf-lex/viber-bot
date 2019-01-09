@@ -13,6 +13,8 @@ use Paragraf\ViberBot\Intefaces\EventInterface;
 
 class ConversationStartedEvent extends Event implements EventInterface
 {
+    public $event = 'conversation_started';
+
     public $user;
 
     public $type;
@@ -21,9 +23,9 @@ class ConversationStartedEvent extends Event implements EventInterface
 
     public $subscribed;
 
-    public function __construct($event, $timestamp, $message_token, ViberUser $user, $type, $context, $subscribed)
+    public function __construct($timestamp, $message_token, ViberUser $user, $type, $context, $subscribed)
     {
-        parent::__construct($event, $timestamp, $message_token);
+        parent::__construct($timestamp, $message_token);
 
         $this->user = $user;
         $this->type = $type;
