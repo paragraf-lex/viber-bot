@@ -62,7 +62,7 @@ When the installation is done you have access to `Bot` and `Client` class.
 
 ### Bot class
 
-With bot class you naivgate your VberBot how to work.
+With bot class you naivgate your ViberBot how to work.
 
 ```php 
 (new Bot($request, new TextMessage()))
@@ -72,6 +72,7 @@ With bot class you naivgate your VberBot how to work.
   ->replay("Hello World!")
   ->send();
 ```
+Note: If viber user not set `name` you will get error.
 
 You can change responding type Message and Event who listen that event.
 
