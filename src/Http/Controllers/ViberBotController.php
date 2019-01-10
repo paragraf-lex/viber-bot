@@ -36,7 +36,7 @@ class ViberBotController extends Controller
         (new Bot($request, new TextMessage()))
             ->on(new MessageEvent($request->timestamp, $request->message_token, new ViberUser($request->sender['id'], $request->sender['name']), $request->message))
             ->hears('/^[\\\P\\\p][\d+]{5,5}$/')
-            ->body(function (){
+            ->body(function () {
                 dump(factory(User::class)->create()->id);
                 dump(factory(User::class)->create()->id);
             })
