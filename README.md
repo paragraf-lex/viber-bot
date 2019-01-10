@@ -125,11 +125,13 @@ Client class, provide to you extra utility.
 
 | API |Description |
 | --- | --- |
-| `broadcast($text, $model, $method)` | Broadcast message to all subscribed user on Viber Chat, 300 users per request. Note: `$method` must point to viber_id. |
+| `broadcast($text, $model, $method)` | Broadcast message to all subscribed user on Viber Chat, 300 users per request. |
 | `getUserDetails($user_id)` | Get details for specific user |
 | `getOnlineStatus(array $viberIds)` | Get online statuses for users, 100 users per request |
 | `getAccountInfo()` | Get account information (Your Public Account) |
 | `removeWebhook()` | Remove WebHook |
+
+Note: `$method` in `broadcast()` must point to viber_id. Also `getOnlineStatus()` need `viber_ids`.
 
 If you want more information about Viber API or how something works check [Viber REST API](https://developers.viber.com/docs/api/rest-bot-api/)
 
