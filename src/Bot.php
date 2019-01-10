@@ -5,6 +5,8 @@ namespace Paragraf\ViberBot;
 use Paragraf\ViberBot\Http\Http;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Collection;
+//TODO: Make it through composer | Not it's not working, no reason
+require_once "helpers.php";
 
 class Bot
 {
@@ -53,6 +55,18 @@ class Bot
         }
 
         if (is_string($text)) {
+
+            /**
+             * This represent regex.
+             */
+            if (startWith('/', $text) && endWith('/', $text))
+            {
+                if (preg_match($text, $this->request->message['text']))
+                {
+                    return $this;
+                }
+            }
+
             if ($this->request->message['text'] === $text) {
                 $this->text = $text;
 
@@ -63,6 +77,13 @@ class Bot
 
 //          throw Exception;
         }
+
+        return $this;
+    }
+
+    public function body($callback)
+    {
+        $callback(func_get_args());
 
         return $this;
     }
