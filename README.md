@@ -79,7 +79,8 @@ You can change responding type Message and Event who listen that event.
 | API | Accept | Description |
 | --- | --- | --- |
 | `on(new MessageEvent(...))` | `Event object` | Listen specific Event |
-| `hears("Hi!")` | `string, array` | ViberBot listen key word `Hi!`, can be array for more words for one event |
+| `hears("Hi!")` | `string, array, regex` | ViberBot listen key word `Hi!`, can be array for more words for one event |
+| `body($callback)` | `callback` | ViberBot can do some business logic. |
 | `replay("Hello World!")` | `string, array, Model` | ViberBot respond with `Hello World!`, can be array or Model |
 | `send()` | --- | Send respond to Viber server. |
 
