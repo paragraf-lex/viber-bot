@@ -120,14 +120,14 @@ You can change responding type Message and Event who listen that event.
 Client class, provide to you extra utility.
 
 ```php 
- (new Client())->broadcast('Hello', User::all(), 'name');
+ (new Client())->broadcast('Hello', User::all(), 'viber_id');
 ```
 
 | API |Description |
 | --- | --- |
-| `broadcast($text, $model, $method)` | Broadcast message to all subscribed user on Viber Chat, 300 users per request |
+| `broadcast($text, $model, $method)` | Broadcast message to all subscribed user on Viber Chat, 300 users per request. Note: `$method` must point to viber_id. |
 | `getUserDetails($user_id)` | Get details for specific user |
-| `getOnlineStatus(array $userIds)` | Get online statuses for users, 100 users per request |
+| `getOnlineStatus(array $viberIds)` | Get online statuses for users, 100 users per request |
 | `getAccountInfo()` | Get account information (Your Public Account) |
 | `removeWebhook()` | Remove WebHook |
 
