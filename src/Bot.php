@@ -53,6 +53,8 @@ class Bot
                     return $this->hears($txt);
                 }
             }
+
+            $this->proceed = false;
         }
 
         if (is_string($text)) {
