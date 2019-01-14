@@ -12,7 +12,7 @@ return [
 
     'photo' => env('VIBERBOT_PHOTO'),
 
-    /**
+    /*
      * When setting controller use full path to file (namespace).
      *
      * Example: \App\Http\Controllers\BotController@index
