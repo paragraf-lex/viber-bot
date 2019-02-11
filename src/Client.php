@@ -18,7 +18,7 @@ class Client
 
     public function getAccountInfo()
     {
-        Http::call('POST', 'get_account_info');
+        return Http::call('POST', 'get_account_info');
     }
 
     /**
@@ -33,7 +33,7 @@ class Client
 
     public function getUserDetails($user_id)
     {
-        Http::call('POST', 'get_user_details', ['id' => $user_id]);
+        return Http::call('POST', 'get_user_details', ['id' => $user_id]);
     }
 
     /**

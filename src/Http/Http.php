@@ -22,6 +22,12 @@ class Http
 
         if ($method === 'POST') {
             $curl->post(($baseUrlActive ? static::$BASE_URL : '').$url, json_encode($body));
+
+            if ($curl->error) {
+                return json_encode('Error: '.$curl->errorCode.': '.$curl->errorMessage."\n");
+            }
+
+            return $curl->response;
         }
 
         if ($method === 'GET') {
