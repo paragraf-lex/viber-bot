@@ -18,6 +18,18 @@ class Button
 
     public $TextSize;
 
+    public $Columns;
+
+    public $Rows;
+
+    public $BgColor;
+
+    public $Image;
+
+    public $TextHAlign;
+
+    public $TextVAlign;
+
     public function __construct($ActionType, $ActionBody, $Text, $TextSize)
     {
         $this->ActionType = $ActionType;
@@ -72,5 +84,77 @@ class Button
         $this->TextSize = $TextSize;
 
         return $this;
+    }
+
+    public function setColumns($Columns)
+    {
+        $this->Columns = $Columns;
+
+        return $this;
+    }
+
+    public function getColumns()
+    {
+        return $this->Columns;
+    }
+
+    public function setRows($Rows)
+    {
+        $this->Rows = $Rows;
+
+        return $this;
+    }
+
+    public function getRows()
+    {
+        return $this->Rows;
+    }
+
+    public function setBgColor($BgColor)
+    {
+        $this->BgColor = $BgColor;
+
+        return $this;
+    }
+
+    public function getBgColor()
+    {
+        return $this->BgColor;
+    }
+
+    public function setImage($Image)
+    {
+        $this->Image = $Image;
+
+        return $this;
+    }
+
+    public function getImage()
+    {
+        return $this->Image;
+    }
+
+    public function setTextHAlign($TextHAlign)
+    {
+        $this->TextHAlign = $TextHAlign;
+
+        return $this;
+    }
+
+    public function getTextHAlign($TextHAlign)
+    {
+        return $this->TextHAlign;
+    }
+
+    public function setTextVAlign($TextVAlign)
+    {
+        $this->TextVAlign = $TextVAlign;
+
+        return $this;
+    }
+
+    public function getTextVAlign($TextVAlign)
+    {
+        return $this->TextVAlign;
     }
 }
